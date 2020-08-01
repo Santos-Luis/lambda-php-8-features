@@ -6,6 +6,7 @@
     "serverless": "^1.50.0"
   },
   "scripts": {
-    "deploy": "./node_modules/.bin/serverless deploy"
+    "deploy": "./node_modules/.bin/serverless deploy",
+    "local": "./node_modules/.bin/serverless invoke local -f lambda"
   }
 }
