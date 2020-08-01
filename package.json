@@ -1,0 +1,7 @@
+{
+  "name": "lambda-php-8-features",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless": "^1.50.0"
+  }
+}

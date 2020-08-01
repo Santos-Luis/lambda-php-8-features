@@ -1,0 +1,7 @@
+.idea/*
+vendor/*
+
+###> serverless ###
+.serverless
+node_modules
+###< serverless ###

@@ -1,0 +1,15 @@
+{
+  "name": "santos-luis/lambda-php-8-features",
+  "description": "Adding new PHP 8 features to an aws lambda using bref layers",
+  "type": "project",
+  "version": "0.1.0",
+  "authors": [{
+    "name": "Luis Henriques",
+    "email": "luissh5@outlook.com",
+    "role": "Software Engineer"
+  }],
+  "require": {
+    "bref/bref": "^0.5.29",
+    "php-di/php-di": "^6.2"
+  }
+}
