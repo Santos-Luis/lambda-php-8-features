@@ -36,7 +36,8 @@ We recommend you to follow the [official bref documentation](https://bref.sh/doc
 
 ##### Deployment bucket
 * So we don't need to put the bucket name on a public git repo, our `serverless.yml` is fetching the repo name from a non-created file named `secrets.yml`.
-* You to create that file an also put a key named `deploymentBucket` and the value being your bucket name.
+* You need to create that file an also put a key named `deploymentBucket` and the value being your bucket name.
+* This file can also be used for future similar arguments.
 
 ----
 #### Test Event (aws console)
