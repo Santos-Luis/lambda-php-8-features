@@ -1,5 +1,6 @@
 {
   "name": "lambda-php-8-features",
+  "license": "UNLICENSED",
   "dependencies": {},
   "devDependencies": {
     "serverless": "^1.50.0"

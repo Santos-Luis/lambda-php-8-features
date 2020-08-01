@@ -5,7 +5,7 @@ provider:
   region: eu-west-1
   runtime: provided
   deploymentBucket:
-    name: env(DEPLOYMENT_BUCKET)
+    name: ${file(./secrets.yml):deploymentBucket}
   iamManagedPolicies:
     - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 
