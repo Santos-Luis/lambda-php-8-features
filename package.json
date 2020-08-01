@@ -3,5 +3,8 @@
   "dependencies": {},
   "devDependencies": {
     "serverless": "^1.50.0"
+  },
+  "scripts": {
+    "deploy": "./node_modules/.bin/serverless deploy"
   }
 }
