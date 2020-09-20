@@ -2,7 +2,7 @@
 Project that aims to have "dummy" examples of the new PHP8 features.
 
 
-Currently, PHP8 still is in alpha version, but bref not only allows us to create AWS lambdas with custom PHP layers but also has the most updated PHP8 alpha version on those layers. 
+Currently, PHP8 still is in beta version, but [bref](https://github.com/brefphp/bref) not only allows us to create AWS lambdas with custom PHP layers but also has the most updated PHP8 beta version on those layers.
 
 #### Stack Documentation
 https://bref.sh <br />
