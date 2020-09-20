@@ -4,10 +4,8 @@ namespace App;
 
 class NamedArguments
 {
-    /** Still in development
-    public function getUnionTypesNamedArguments(): ?UnionTypes
+    public static function getUnionTypesNamedArguments(): ?UnionTypes
     {
         return new UnionTypes(arg2: 2);
     }
-    */
 }
