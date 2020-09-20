@@ -1,5 +1,7 @@
 <?php
 
+use App\NamedArguments;
+use App\NullSafe;
 use App\UnionTypes;
 use DI\ContainerBuilder;
 use function DI\create;
@@ -16,8 +18,12 @@ return static function (array $event) {
     $arg1 = $body['arg1'];
     $arg2 = (int)$body['arg2'];
 
-    $containerBuilder->addDefinitions([UnionTypes::class => create()->constructor($arg1, $arg2)]);
+    $containerBuilder->addDefinitions([
+        UnionTypes::class => create()->constructor(),
+        NamedArguments::class => create()->constructor(),
+        NullSafe::class => create()->constructor(),
+    ]);
     $container = $containerBuilder->build();
 
-    return $container->get(UnionTypes::class)->getArgs();
+    return $container->get(NullSafe::class)::initDefault()->getUnionTypesArg1();
 };
