@@ -1,5 +1,6 @@
 <?php
 
+use App\ConstructorPromotion;
 use App\MatchExpressions;
 use App\NamedArguments;
 use App\NullSafe;
@@ -24,15 +25,18 @@ return static function (array $event) {
         NamedArguments::class => create()->constructor(),
         NullSafe::class => create()->constructor(),
         MatchExpressions::class => create()->constructor(''),
+        ConstructorPromotion::class => create()->constructor(''),
     ]);
     $container = $containerBuilder->build();
 
     $nullSafe = $container->get(NullSafe::class)::initDefault()->getUnionTypesArg1();
     $matchExpressions = $container->get(MatchExpressions::class)::initDefault();
+    $constructorPromotion = $container->get(ConstructorPromotion::class)::initDefault();
 
     return [
         'null_safe' => $nullSafe,
         'match_expressions' => $matchExpressions->match(1),
-        'new_string_methods' => $matchExpressions->strNewFunctions('a')
+        'new_string_methods' => $matchExpressions->strNewFunctions('a'),
+        'constructor_promotion' => $constructorPromotion->getArguments(),
     ];
 };
