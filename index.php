@@ -28,10 +28,11 @@ return static function (array $event) {
     $container = $containerBuilder->build();
 
     $nullSafe = $container->get(NullSafe::class)::initDefault()->getUnionTypesArg1();
-    $matchExpressions = $container->get(MatchExpressions::class)::initDefault()->match(1);
+    $matchExpressions = $container->get(MatchExpressions::class)::initDefault();
 
     return [
         'null_safe' => $nullSafe,
-        'match_expressions' => $matchExpressions,
+        'match_expressions' => $matchExpressions->match(1),
+        'new_string_methods' => $matchExpressions->strNewFunctions('a')
     ];
 };

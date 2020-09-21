@@ -30,6 +30,15 @@ class MatchExpressions
         };
     }
 
+    public function strNewFunctions(string $toMatch): array
+    {
+        return [
+            'contains' => str_contains($this->str1, $toMatch),
+            'starts_with' => str_starts_with($this->str1, $toMatch),
+            'ends_with' => str_ends_with($this->str1, $toMatch),
+        ];
+    }
+
     public static function initDefault(): self
     {
         return new self('abc');
